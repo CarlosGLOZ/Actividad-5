@@ -42,6 +42,7 @@ h6 {
 }
 body {
   margin: 0;
+  font-size: 100%;
 }
 /* Clear floats after the columns */
 .row:after {
@@ -90,25 +91,28 @@ body {
   float: left;
   position: fixed;
   height: 100vh;
-  background-color: grey;
+  background-color: #313131;
+  color: whitesmoke;
 }
 .column-nav .text-column li {
   font-size: 140%;
+}
+.column-nav .text-column li a {
+  color: whitesmoke;
 }
 .column-mid {
   width: 65%;
   float: left;
   margin-left: 15%;
-  background-color: #464646;
+  background-color: #b4b4b4;
+  color: black;
 }
 .column-mid footer {
   margin: 4%;
-  color: white;
   text-align: left;
 }
 .column-mid a {
   margin: 0%;
-  color: white;
   text-align: left;
 }
 .column-news {
@@ -116,12 +120,16 @@ body {
   float: left;
   position: fixed;
   height: 100vh;
-  background-color: grey;
+  background-color: #313131;
+  color: whitesmoke;
   margin-left: 80%;
   overflow-y: scroll;
 }
 .column-news h1 {
   text-align: center;
+}
+.column-news footer {
+  color: black;
 }
 .column-sidescroll {
   height: 25%;
@@ -135,11 +143,8 @@ body {
   width: 100%;
 }
 #lugares-adicionales .row {
-  background-color: whitesmoke;
-  overflow: scroll;
-}
-#lugares-adicionales h2 {
-  color: white;
+  background-color: #5e5e5e;
+  overflow-x: scroll;
 }
 a {
   text-decoration: none;
@@ -166,6 +171,9 @@ a {
 #lugares-interés .column-3 {
   text-align: center;
 }
+#lugares-interés h3 {
+  color: black;
+}
 .text-column {
   margin: 10%;
 }
@@ -174,7 +182,7 @@ a {
 }
 .news-card {
   margin: 2%;
-  background-color: white;
+  background-color: whitesmoke;
   padding-bottom: 5%;
 }
 .news-card img {
@@ -185,7 +193,13 @@ a {
 .news-card footer {
   padding: 1%;
 }
-@media only screen and (max-width: 600px) {
+a:hover {
+  text-decoration: underline;
+}
+#link-notícias {
+  visibility: hidden;
+}
+@media only screen and (max-width: 1200px) {
   /*reglas*/
   /* column-3 pasará de tener 33.33% a 100% */
   .column-3 {
@@ -206,5 +220,8 @@ a {
   .column-news {
     position: relative;
     height: auto;
+  }
+  #link-notícias {
+    visibility: visible;
   }
 }

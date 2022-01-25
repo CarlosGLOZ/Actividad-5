@@ -46,6 +46,7 @@ h6{
 }
 body{
     margin: 0;
+    font-size: 100%;
 }
 
 /* Clear floats after the columns */
@@ -104,10 +105,14 @@ body{
     float: left;
     position: fixed;
     height: 100vh;
-    background-color: grey;
+    background-color: rgb(49, 49, 49);
+    color: whitesmoke;
     .text-column{
         li {
             font-size: 140%;
+            a {
+                color: whitesmoke;
+            }
         }
     }
 }
@@ -116,15 +121,14 @@ body{
     width: 65%;
     float: left;
     margin-left: 15%;
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(180, 180, 180);
+    color: black;
     footer {
         margin: 4%;
-        color: white;
         text-align: left;
     }
     a {
         margin: 0%;
-        color: white;
         text-align: left;
         
     }
@@ -136,11 +140,15 @@ body{
     float: left;
     position: fixed;
     height: 100vh;
-    background-color: grey;
+    background-color: rgb(49, 49, 49);
+    color: whitesmoke;
     margin-left: 80%;
     overflow-y: scroll;
     h1 {
         text-align: center;
+    }
+    footer {
+        color: black;
     }
 }
 
@@ -158,11 +166,8 @@ body{
 
 #lugares-adicionales {
     .row{
-        background-color: whitesmoke;
-        overflow: scroll;
-    }
-    h2 {
-        color: white;
+        background-color: rgb(94, 94, 94);
+        overflow-x: scroll;
     }
 }
 
@@ -196,6 +201,9 @@ a {
     .column-3 {
         text-align: center;
     }
+    h3 {
+        color: black;
+    }
 }
 
 .text-column {
@@ -207,7 +215,7 @@ a {
 
 .news-card {
     margin: 2%;
-    background-color: white;
+    background-color: whitesmoke;
     padding-bottom: 5%;
     img {
         padding: 2%;
@@ -219,7 +227,15 @@ a {
     }
 }
 
-@media only screen and (max-width: 600px) {
+a:hover {
+    text-decoration: underline;
+}
+
+#link-notícias {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 1200px) {
     /*reglas*/
     /* column-3 pasará de tener 33.33% a 100% */
     .column-3{
@@ -241,5 +257,8 @@ a {
     .column-news {
         position: relative;
         height: auto;
+    }
+    #link-notícias {
+        visibility: visible;
     }
 }
